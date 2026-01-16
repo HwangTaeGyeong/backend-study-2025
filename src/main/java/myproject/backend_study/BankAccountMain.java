@@ -10,5 +10,8 @@ public class BankAccountMain {
 
 		bankAccount.withdraw(10000);
 		System.out.println(bankAccount.getBalance());
+
+		bankAccount.withdraw(-100);
+		bankAccount.withdraw(200000);
 	}
 }

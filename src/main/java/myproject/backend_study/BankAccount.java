@@ -21,10 +21,25 @@ public class BankAccount {
 	}
 
 	public void deposit(int balance) {
+		if (balance < 0) {
+			System.out.println("balance 를 음수로 사용할 수 없습니다.");
+			return;
+		}
+
 		this.balance = this.balance + balance;
 	}
 
 	public void withdraw(int balance) {
+		if (balance < 0) {
+			System.out.println("balance 를 음수로 사용할 수 없습니다.");
+			return;
+		}
+
+		if (this.balance < balance) {
+			System.out.println("잔액이 출금액보다 적습니다.");
+			return;
+		}
+
 		this.balance = this.balance - balance;
 	}
 }
